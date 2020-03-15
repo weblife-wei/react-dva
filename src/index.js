@@ -11,8 +11,9 @@ const app = dva({
 // app.use({});
 
 // 3. Model
-app.model(require('./models/example').default);
-app.model(require('./models/counter').default);
+// app.model(require('./models/example').default);
+// app.model(require('./models/counter').default);
+require('./models').default.forEach(value => app.model(value.default));
 
 
 
